@@ -16,5 +16,6 @@ class P2_exerciseKtTest {
         `find category with most attribures`()
         `count avg number of attributes per category`()
         `unique category per attribute`()
+        `unique global attributes`()
     }
 }

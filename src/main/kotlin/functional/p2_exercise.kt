@@ -49,3 +49,8 @@ fun `unique category per attribute`(){
     TODO()
 }
 
+fun `unique global attributes`(){
+    //fold
+    TODO()
+}
+
