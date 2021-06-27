@@ -5,7 +5,7 @@
 This repo contains a throughout walkthrough of the kotlin programing language,
 created for education purposes.
 
-The content is divided into two parts, 'basic' and 'advanced'.
+The content is divided into two main parts, 'basic' and 'advanced'.
 
 It is intended to be used as a 'bank' of kotlin examples 
 followed by short explanations.
