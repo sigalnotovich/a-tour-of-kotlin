@@ -69,7 +69,7 @@ fun callbackToACoRoutine()  = runBlocking {
 suspend fun asyncHttpReq(): Response {
     return suspendCoroutine { cont ->
         async.get("http://httpbin.org/get") {
-            cont.resumeWith(Result.success(this))
+            cont.resumeWith(Result.success(this)) // yield
         }
     }
 }

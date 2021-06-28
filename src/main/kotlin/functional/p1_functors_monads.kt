@@ -92,6 +92,7 @@ class MOptional<T> private constructor(valueOrNull: T?) : Functor<T>, Monad<T> {
 
     override fun <M> flatMap(f: (T) -> M): M {
         return valueOrNull?.let(f)!!
+        // BUGGY IMPLEMENTATION
     }
 
 
