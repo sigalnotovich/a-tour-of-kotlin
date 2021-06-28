@@ -24,9 +24,6 @@ internal class P1_functorsKtTest{
         println(
             fOptional
         )
-        println(
-            flattenEmpty()
-        )
     }
 
 }
