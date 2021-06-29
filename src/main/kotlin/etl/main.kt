@@ -29,7 +29,7 @@ PART 1:
 PART 2:
             IMPLEMENT A SPRING CRUD API OVER THE PRODUCTS STORED IN MYSQL
 
-            - provide a search api that will allow fetching all products within a specific category, specific material4
+            - provide a filter api that will allow fetching all products within a specific category, specific material4
             - provide an api to get a product by id,name,
             - provide an api to delete a product
             - provide an api to update a product
