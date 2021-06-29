@@ -1,0 +1,31 @@
+###
+
+# curl https://60d34780858b410017b2f602.mockapi.io/products/products
+GET https://60d34780858b410017b2f602.mockapi.io/products/products
+###
+
+# curl https://60d34780858b410017b2f602.mockapi.io/products/products/1
+GET https://60d34780858b410017b2f602.mockapi.io/products/products/1
+
+###
+# OR POST TO CREATE A NEW PRODUCT
+PUT https://60d34780858b410017b2f602.mockapi.io/products/products/1
+Content-Type: application/json
+
+{
+  "id": "1",
+  "createdAt": "2021-06-23T08:25:31.174Z",
+  "name": "Claire Kilback",
+  "avatar": "https://cdn.fakercloud.com/avatars/arindam__128.jpg",
+  "category": "solid state",
+  "tags": ["da",{"da": 1}],
+  "price": "970.00",
+  "department": "Grocery",
+  "color": "silver",
+  "adjective": "Awesome",
+  "material": "Hard",
+  "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients"
+}
+###
+
+DELETE https://60d34780858b410017b2f602.mockapi.io/products/products/1

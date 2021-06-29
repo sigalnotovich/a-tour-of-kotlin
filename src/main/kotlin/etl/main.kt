@@ -2,29 +2,26 @@ package etl
 
 import java.sql.DriverManager
 import java.sql.SQLException
-import java.util.*
-
 
 fun main() {
-    val sqlSelectAllPersons = "SELECT * FROM person"
-    val connectionUrl = "jdbc:mysql://mysql-2678aa21-domrevigor-079c.aivencloud.com:17474/defaultdb"
+    val host = System.getenv("DB_HOST")
+    val user = System.getenv("DB_USER")
+    val pass = System.getenv("DB_PASS")
+    val db = System.getenv("DB_NAME")
+    val connectionUrl = "jdbc:mysql://$host:3306/$db"
 
     try {
-        val properties = Properties()
-        DriverManager.getConnection(connectionUrl, "avnadmin","aas03ic8d34aua25").use { conn ->
-            conn.prepareStatement(sqlSelectAllPersons).use { ps ->
+        DriverManager.getConnection(connectionUrl, user,pass).use { conn -> // use closes the connection
+            conn.prepareStatement("SELECT * FROM user").use { ps ->
                 ps.executeQuery().use { rs ->
                     while (rs.next()) {
-                        val id = rs.getLong("ID")
-                        val name = rs.getString("FIRST_NAME")
-                        val lastName = rs.getString("LAST_NAME")
-
-                        // do something with the extracted data...
+                        val login = rs.getString("login")
+                        println(login)
                     }
                 }
             }
         }
     } catch (e: SQLException) {
-        // handle the exception
+        e.printStackTrace()
     }
 }
