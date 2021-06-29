@@ -34,6 +34,9 @@ PART 2:
             - provide an api to delete a product
             - provide an api to update a product
 
+            WHEN DESIGNING THE API, consider restfull api best practices.
+            use query/path params when necessary
+
 */
 
 
