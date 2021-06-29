@@ -10,6 +10,6 @@ fun main() {
 }
 
 
-// in koltin can put many classes in same file
+// in koltin we can put many classes in same file
 // file name and class name is un related
 // packaging by layer vs packaging by feature

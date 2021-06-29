@@ -23,9 +23,9 @@ class DelegatingCollection<T> : Collection<T> {
 
 class DelegatingCollection2<T>(
     innerList: Collection<T> = ArrayList()
-) : Collection<T> by innerList { // meet 'by'
-    // more stuff
-    // whats the difference between extension functions
+) : Collection<T> by innerList { // meet 'by' keyword
+    // whats the difference between extension functions and this technique ?
+    fun somethingNew() = "opa"
 
-    override val size: Int get() = -1 // can also override delegate
+    override val size: Int get() = -1 // can also override delegated methods
 }

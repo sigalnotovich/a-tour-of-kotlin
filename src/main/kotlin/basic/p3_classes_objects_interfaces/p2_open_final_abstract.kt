@@ -6,7 +6,7 @@ package basics.p3_classes_objects_interfaces
 // This means all classes and methods that aren’t specifically intended to be overridden
 // ought to be explicitly marked as final.
 
-//final by default
+//in kotlin classes are final by default
 open class RichButton: Clickable {
     final override fun click() = print("") // final here means that subclasses wont be able to override this
     open fun animate() {}

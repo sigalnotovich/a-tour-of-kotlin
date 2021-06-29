@@ -28,7 +28,7 @@ class ViewButton : View {
     }
 
     class ButtonState : State { // like a static nested class
-// inner classes cant access parent class
+// inner classes can't access parent class
     }
 
     inner class OtherState : State {
@@ -36,6 +36,8 @@ class ViewButton : View {
         fun getOuterReference(): ViewButton = this@ViewButton // special syntax
     }
 }
+
+// you will probably never use the above in real life...
 
 
 interface Expr

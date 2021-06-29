@@ -24,8 +24,6 @@ fun alphabet2(): String {
     }
 }
 
-//extension function is, in a sense, a function with a receiver
-
 fun alphabet3(): String {
     return with(StringBuilder()) {
         for (letter in 'A'..'Z') {
@@ -57,4 +55,4 @@ fun alphabet5() = buildString { //buildString is an stdlib function
     }
     append("\nNow I know the alphabet!")
 }
-//todo: step into buildString and checkout its signature
+//todo: step into buildString and checkout its signature ( it accepts a lambda with receiver )

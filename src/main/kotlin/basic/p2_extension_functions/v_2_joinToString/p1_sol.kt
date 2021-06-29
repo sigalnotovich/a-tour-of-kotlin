@@ -16,4 +16,4 @@ fun <T> joinToString(
     return res.toString()
 }
 
-// println(joinToString(list, "; ", "(", ")"))
+ val x  = joinToString(list, "; ", "(", ")")

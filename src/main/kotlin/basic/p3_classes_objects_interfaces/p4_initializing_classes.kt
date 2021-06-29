@@ -32,7 +32,6 @@ open class Human {
         this.age = age
     }
 }
-
 // because not all constructors initialize it
 
 

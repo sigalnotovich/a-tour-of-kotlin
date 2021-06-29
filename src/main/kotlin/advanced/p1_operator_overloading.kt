@@ -10,13 +10,6 @@ fun f() {
     X(1, 2) + X(1, 3) // X(2,5)
 }
 
-
-
-
-
-
-
-
 data class Point(val x: Int, val y: Int) : Comparable<Point> {
     operator fun plus(other: Point) = Point(x + other.x, y + other.y)
     operator fun minus(other: Point) = Point(x - other.x, y - other.y)

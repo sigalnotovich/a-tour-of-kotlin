@@ -1,6 +1,6 @@
 package basics.p4_lambda
 
-// you will use lambdas all the time!
+// you will use lambdas all the time! LIKE ALL THE TIME !!!
 
 
 data class Person(val name: String, val age: Int)
@@ -19,14 +19,14 @@ fun oldest(people: List<Person>): Person? {
 fun withLambda(people: List<Person>){
     people.maxByOrNull({ it.age })
     people.maxByOrNull { it.age }
-    people.maxByOrNull(Person::age) // delegating a lambda to a property getter
+    people.maxByOrNull(Person::age) // a property getter is a function...
 }
 
 val lambda = { x: Int, y: Int -> x + y }
 //param list
 // body
 // in curly bracets {}
-// todo: use idea to check type
+// todo: use idea to check type ( ctrl+j ) - on mac
 
 fun ex1(){
     { println(42) }() //IIFE  - Immediately-invoked Function Expressions
@@ -40,6 +40,7 @@ val names = people.joinToString(separator = " ", transform = { p: Person -> p.na
 val clearNames = people.joinToString(" ") { p: Person -> p.name } // easy to read
 val clearNames3 = people.joinToString(" ") { p -> p.name } // better ?
 val clearNames2 = people.joinToString(" ") { it.name } //  better ?
+                    // meet it, its taken from groovy, you will use it a lot.
 
 
 

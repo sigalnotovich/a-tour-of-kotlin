@@ -31,8 +31,8 @@ fun callMe() {
 
 /*
 java streams and sequences are basically the same
-besides java allows running a stream in parallel on many cores streams dont
-but, you can use java streams in kotlin if you want
+java allows running a stream in parallel on many cores streams dont
+you can use java streams in kotlin if you want
 */
 
 

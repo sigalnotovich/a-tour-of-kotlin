@@ -13,7 +13,7 @@ class Rectangle(val height: Int, val width: Int) {
         }
 }
 
-class Repository(connectionString: String){ // constructor field
-    // never do this, use dependency injection
+class Repository(connectionString: String){
+    // constructor field ( neither val, or var ) no backing field is created
     val connection: Connection = DriverManager.getConnection(connectionString)
 }

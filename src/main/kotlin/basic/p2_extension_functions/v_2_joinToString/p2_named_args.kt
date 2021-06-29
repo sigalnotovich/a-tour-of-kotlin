@@ -7,7 +7,7 @@ fun run() {
     )
 
     // how to make it less verbose ?
-    // what parameters all these Strings correspond to?
+    // what parameters all these Strings correspond to ????
     /* Java */
 //          joinToString(collection, /* separator */ " ",  /* prefix */ " ", /* postfix */ ".");
     // Maybe you could avoid having to pass four arguments every time you call the function ?

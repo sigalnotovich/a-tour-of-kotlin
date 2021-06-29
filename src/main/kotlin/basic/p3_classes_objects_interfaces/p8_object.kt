@@ -39,7 +39,7 @@ val sorted = files.sortedWith(CaseInsensitiveFileComparator)
 
 data class Person(val static: String) { // static is not a reserved word in kotlin
     // all people instances will share the same NameComparator Object
-    object NameComparator : Comparator<Person> { // like a static object.
+    object NameComparator : Comparator<Person> { // like a static object in java.
         override fun compare(p1: Person, p2: Person): Int =
             p1.static.compareTo(p2.static)
     }
@@ -47,7 +47,7 @@ data class Person(val static: String) { // static is not a reserved word in kotl
 
 
 val persons = listOf(Person("dima"), Person("igor"))
-val sortedPeople = persons.sortedWith(Person.NameComparator)
+val sortedPeople = persons.sortedWith(Person.NameComparator) // access class internal object
 
 
 //  COMPANION OBJECTS
@@ -84,6 +84,7 @@ fun Boy.Companion.SayHello() {
     // for example if Boy is part of the business logic
     // and you add an extension function to serialize it from a json, or an xml
     // this will decouple the class from a format that represents it
+    // but most often, dont use this...
 }
 
 

@@ -104,5 +104,6 @@ inline fun <reified T> isA(value: Any) = value is T
 inline fun <reified T: Any> getInstanceOf(clazz: T) {
     ServiceLoader.load(clazz::class.java)
 }
+//          reified is very useful in real life
 
 

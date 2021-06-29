@@ -60,15 +60,19 @@ fun randomPrint() {
 
     //todo: 8 convert to when using IDEA
     //todo: 9 convert back to if using idea
-    if (rand % 2 == 0){
+    if (rand % 2 == 0) {
         println("$rand is Even")
-    } else if (rand % 3 == 0) {
+    }
+    else if (rand % 3 == 0) {
         println("$rand is divided by 3")
-    } else if (rand % 4 == 0) {
+    }
+    else if (rand % 4 == 0) {
         println("$rand is divided by 4")
-    } else if (rand % 5 == 0) {
+    }
+    else if (rand % 5 == 0) {
         println("$rand is divided by 5")
-    } else if (rand % 6 == 0) {
+    }
+    else if (rand % 6 == 0) {
         println("$rand is divided by 6")
     }
 

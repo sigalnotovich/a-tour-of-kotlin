@@ -21,19 +21,16 @@ fun setDa() {
 
 fun settingVal() {
     val message: String
-    if (canPerformOperation()) {
+    if (true) {
         message = "Success"
-        // ... do somehting
+        // ... late initialization of val.
+        // try deleting the else brunch
     }
     else {
         message = "Failed"
     }
 
 }
-
-fun canPerformOperation() = true
-
-
 
 
 val array = mutableListOf("")

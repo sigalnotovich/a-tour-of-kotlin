@@ -4,9 +4,6 @@ package advanced
 
 val sum: (Int, Int) -> Int = { x: Int, y: Int -> x + y }
 
-var canReturnNull: () -> Int? = { null }
-
-var funOrNull: ((Int, Int) -> Int)? = null
 
 fun highOrderFun(num: Int, transform: (Int) -> Int): () -> Int {
     return { transform(num) } //thunk
@@ -42,15 +39,15 @@ fun <T> joinToString(
     append(postfix)
 }
 
-val joined = joinToString(listOf(1, 2, 3), prefix = "[", postfix = "]", separator = ",")
+val joined = joinToString(listOf(1, 2, 3), prefix = "[", postfix = "]", separator = ",") { "$it" }
 // ["__1__","__2__","__3__"]
 
 
-fun ((Char) -> Boolean).concat(f: (Char) -> Boolean): (Char) -> Boolean = { it ->
-    invoke(it) && f(it) // invoke calls the 'this' function
-}
 
 
 val predicate = { it: Char -> it == 'b' }.concat { it == 'c' }
 val bbc = "ababac".filter(predicate)
 
+fun ((Char) -> Boolean).concat(f: (Char) -> Boolean): (Char) -> Boolean = { it ->
+    invoke(it) && f(it) // invoke calls the 'this' function
+}

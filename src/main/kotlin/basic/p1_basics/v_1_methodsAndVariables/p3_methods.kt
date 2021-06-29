@@ -3,7 +3,7 @@ package basics.p1_basics
 
 
 // trinary if
-// if is an expresion, so do try catch, and when
+// if is an expression, so do try catch, and when
 // use idea to convert expression body
 fun max(a: Int, b: Int): Int {
     return if (a > b) a else b

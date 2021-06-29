@@ -4,7 +4,7 @@ package basics.p3_classes_objects_interfaces
 
 class Client(val name: String, val id: Int) {
     override fun toString() = "Client(name=$name, id=$id)"
-    //todo: try removing the override here, why is this good ?
+    //todo: try removing the override here, why the compiler is angry ? ?
     override fun equals(other: Any?): Boolean { // 'Any?' is like java.lang.Object
         return when(other) {
             is Client -> other.id == id && other.name == name
