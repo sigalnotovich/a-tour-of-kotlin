@@ -8,7 +8,6 @@ import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
 import kotlin.test.assertEquals
 
-
 class MockitoTest {
 
     @Mock lateinit var repository: OrderRepository

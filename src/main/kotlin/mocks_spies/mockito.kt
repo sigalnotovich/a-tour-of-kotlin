@@ -8,35 +8,37 @@ data class OrderModel(
 
 var ordersList = mutableListOf<OrderModel>()
 
-open class DbClient {
+@AllOpen
+ class DbClient {
 
-    open fun insert(name: String, sureName: String, id: Int) {
+     fun insert(name: String, sureName: String, id: Int) {
         println("inserting $name  $sureName")
         ordersList.add(
             OrderModel(name, sureName, id)
         )
     }
 
-    open fun read(id: Int) = ordersList.find { it.id == id }
+     fun read(id: Int) = ordersList.find { it.id == id }
 
-    open fun find(name: String, sureName: String) = ordersList.find {
+     fun find(name: String, sureName: String) = ordersList.find {
         it.status == name && it.itemId == sureName
     } != null
 
 }
 
-open class OrderRepository(private val client: DbClient) {
-    open fun getById(id: Int): OrderModel {
+@AllOpen
+ class OrderRepository(private val client: DbClient) {
+     fun getById(id: Int): OrderModel {
         return client.read(id) ?: throw NoSuchElementException()
     }
 
-    open fun update(order: OrderModel) {
+     fun update(order: OrderModel) {
         ordersList = ordersList.map {
             if (it.id == order.id) order else it
         }.toMutableList()
     }
 
-    open fun insert(order: OrderModel) {
+     fun insert(order: OrderModel) {
         if (client.find(order.status,order.itemId)) {
             throw RuntimeException("duplicate entity")
         }
@@ -44,14 +46,16 @@ open class OrderRepository(private val client: DbClient) {
     }
 }
 
-open class ShippingClient {
-    open fun send(order :OrderModel){
+@AllOpen
+ class ShippingClient {
+     fun send(order :OrderModel){
         println("sending order ${order.status}")
         // call some restful api
     }
 }
 
-open class Service(
+@AllOpen
+ class Service(
     private val repository: OrderRepository,
     private val validateOrder: OrderValidator,
     private val shippingClient: ShippingClient) {
@@ -66,10 +70,15 @@ open class Service(
         }
 }
 
-open class OrderValidator {
-    open operator fun invoke(order: OrderModel) {
+@AllOpen
+ class OrderValidator {
+     operator fun invoke(order: OrderModel) {
         if (order.status.isEmpty()) {
             throw RuntimeException("invalid order")
         }
     }
 }
+
+
+
+annotation class AllOpen
