@@ -20,7 +20,7 @@ fun main() {
     println(person)
 
     // using java code, easy !
-    val javaPerson = JavaPerson("da")
+    val javaPerson = JavaPerson("da",123)
     println(javaPerson.name) // calls getName
 
     //todo: 2 add isMarried field with a setter to JavaPerson, and set it from kotlin
