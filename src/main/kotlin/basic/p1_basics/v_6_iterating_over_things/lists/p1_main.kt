@@ -9,8 +9,8 @@ fun main() {
     for (i in 1..100) println(fizBuzz(i)) // inclusive
     for (i in 1 until 100) println(fizBuzz(i)) // exclusive
     //todo: use idea to convert to a function call,
-    // add indices to for loop with idea
-    // show/hide idea preview of auto refactor step
+    //todo: add indices to for loop with idea
+    //todo: show/hide idea preview of auto refactor step
     for (i in 100 downTo 1) println(fizBuzz(i))
 
     (1..100).forEach { println(fizBuzz(it)) } // whats this magic syntax ??
