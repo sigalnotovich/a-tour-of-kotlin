@@ -39,6 +39,7 @@ DELETE https://60d34780858b410017b2f602.mockapi.io/products/products/1
 #  -d '{"title":"title"}'
 POST https://api.github.com/repos/viggin543/a-tour-of-kotlin/issues
 Accept: application/vnd.github.v3+jsons
+Authorization: token $TOKEN
 Content-Type: application/x-www-form-urlencoded
 
 {"title":"title"}
