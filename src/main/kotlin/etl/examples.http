@@ -29,3 +29,19 @@ Content-Type: application/json
 ###
 
 DELETE https://60d34780858b410017b2f602.mockapi.io/products/products/1
+
+###
+
+# curl
+#  -X POST
+#  -H "Accept: application/vnd.github.v3+json"
+#  https://api.github.com/repos/octocat/hello-world/issues
+#  -d '{"title":"title"}'
+POST https://api.github.com/repos/viggin543/a-tour-of-kotlin/issues
+Accept: application/vnd.github.v3+jsons
+Content-Type: application/x-www-form-urlencoded
+
+{"title":"title"}
+
+###
+

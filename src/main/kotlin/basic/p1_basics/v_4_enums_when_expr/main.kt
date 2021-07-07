@@ -25,7 +25,7 @@ fun main() {
     println(Color.BLUE > Color.RED) // ordered
 }
 
-//todo: 5 add to hebrew method, use IDEA to complete all cases
+//todo: 5 delete body and use IDEA to complete all cases
 fun getAlias(color: Color) = when(color){
     Color.RED -> "krasni"
     Color.ORANGE -> "oranjivi"
