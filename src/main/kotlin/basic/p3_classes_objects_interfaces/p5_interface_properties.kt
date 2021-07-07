@@ -11,6 +11,7 @@ class Boris: Developer {
 class Sergei(private val id: String): Developer {
     override val nickname: String
         get() = "iddqd $id"
+    //todo: add a setter and see what the compiler thinks
 }
 
 interface MegaDeveloper {
