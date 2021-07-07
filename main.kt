@@ -1,9 +1,6 @@
 fun main() {
     data class Person(val name: String, val age: Int? = null)
-
-    val boris = Person("Boris")
-    val igor = Person("Igor", 24)
-    val people = listOf(boris, igor)
+    val people = listOf(Person("Boris"), Person("Igor", 24))
     val oldest = people.maxByOrNull { it.age ?: 0 }
     println(
         """
