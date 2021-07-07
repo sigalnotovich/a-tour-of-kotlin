@@ -1,5 +1,9 @@
 package basics.p5_type_system
 
+import basic.JavaClass
+import basic.Printer
+import com.sun.org.apache.bcel.internal.classfile.Utility.printArray
+
 // because NullPointerException sucks
 fun strLen(s: String) = s.length
 fun strLen1(s: String?) = s?.length //todo: try deleting the question mark from the function body
