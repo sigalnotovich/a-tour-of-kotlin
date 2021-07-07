@@ -20,6 +20,7 @@ fun run1() {
     //named args works only when calling kotlin code :(
 }
 
+// default arguments
 fun <T> joinToString_v2(
     collection: Collection<T>,
     separator: String = ",",
