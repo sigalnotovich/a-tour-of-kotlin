@@ -11,7 +11,7 @@ fun readNumber(reader: BufferedReader): Int? { // no checked exceptions in kotli
         null
     } finally {
         //side effect
-        reader.close()
+        reader.close() // this would have thrown a checked exception in java
     }
     return ret
 }
