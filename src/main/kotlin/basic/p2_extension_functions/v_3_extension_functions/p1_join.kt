@@ -7,7 +7,8 @@ package basics.p2_extension_functions.v_3_extension_functions
 const val UNIX_LINE_SEPARATOR = "\n" // top level value, const means it must be assigned in compile time
 // it can also be used inside annotations
 
-fun <T> joinToString ( // java generated class will be called JoinKt.java ( corresponds to file  name )
+fun <T> joinToString (
+// java generated class will be called JoinKt.java ( corresponds to file  name )
     collection: Collection<T>,
     separator: String = ",",
     prefix: String = "[",
